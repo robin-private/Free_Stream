@@ -1,0 +1,26 @@
+<!-- searching and showing top lists and redirect movie into player -->
+ {%extends 'main.html'%}
+ {%block content%}
+ {%include 'navbar.html'%}
+<div style="overflow:auto"  >
+
+    <!--method for search using title -->
+ 
+    <center> {% include 'stream/search.html' %}</center>
+<br>
+<!-- listing top 10 movies -->
+<div class="center" >
+    <ul id="list1" style="list-style: none;">
+        <h3 style="color: rgb(143, 143, 143);">
+            Top Movies</h3>
+        <!-- <hr  style="width:50%;"> -->
+        {% for movie in movies %}
+       
+            <li> <img src="{{movie.img}}" alt=""><a href="{% url 'moviedetails' movie.movieID %}">{{movie}} ({{movie.year}}) [{{movie.rating}}]</a></li>
+        {% endfor %}
+        </ul>
+    </div>
+    </div>
+    
+    {%endblock content%}
+    

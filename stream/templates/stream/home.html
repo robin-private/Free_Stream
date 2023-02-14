@@ -1,0 +1,55 @@
+<!-- home page -->
+{%extends 'main.html'%} {%block content%} {%include 'navbar.html'%}
+
+<!-- <div  class="main" > -->
+
+<!--method for search using title -->
+<div style="overflow:auto">
+
+    <center> {% include 'stream/search.html' %}</center>
+    <div class="menu">
+        <a href="{%url 'topmovies'%}">Top Movies</a>
+
+        <a href="{%url 'bottommovies'%}">Bottom Movies</a>
+        <a href="#documentaries">Btn 1 </a>
+        <a href="#latest">Btn 2</a>
+    </div>
+
+
+    <div class="main"><i class="fa fa-car" style="font-size:48px;"></i>
+        <h2>Free Stream</h2>
+        <p>
+            “I wish we could go to the movies." I stared at him. "We're in a creepy dungeon. There's a chance I might die in the next few hours. You are going to die in the next few hours. And if you had one wish, it would be to catch a movie?”<br> ―
+            Rachel Hawkins, Demonglass</div>
+
+
+    <div class="right" style="background-color: rgb(10, 10, 10);color: rgb(255, 255, 255);">
+        <h2>About</h2>
+        <p>The information provided by the Developer on FreeStream is shared as a part of educational purposes only.</p>
+
+        <!-- The information provided by The Developer on FreeStream is build as a part of educational purposes only.<span id="dots">...</span><span id="more"> The Site may contain (or you may be sent through the Site) links to other websites or content belonging to or originating from third parties or links to websites and features in banners or other advertising. Such external links are not investigated, monitored, or checked for accuracy, adequacy, validity, reliability, or completeness by us.<br> WE DO NOT WARRANT, ENDORSE, GUARANTEE, OR ASSUME RESPONSIBILITY FOR THE ACCURACY OR RELIABILITY OF ANY INFORMATION OFFERED BY THIRD-PARTY WEBSITES LINKED THROUGH THE SITE OR ANY WEBSITE OR FEATURE LINKED IN ANY BANNER OR OTHER ADVERTISING. WE WILL NOT BE A PARTY TO OR IN ANY WAY BE RESPONSIBLE FOR MONITORING ANY TRANSACTION BETWEEN YOU AND THIRD-PARTY PROVIDERS OF PRODUCTS OR SERVICES.
+            </span></p>
+            <button onclick="myFunction()" id="myBtn">Read more</button> -->
+    </div>
+</div><br>
+<div style="background-color:#050505;text-align:center;padding:10px;margin-top:7px;color: rgb(218, 218, 218);">made with love</div>
+<!-- readmore -->
+<!-- <script>
+    function myFunction() {
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+      }
+    }
+    </script> -->
+
+{%endblock content%}

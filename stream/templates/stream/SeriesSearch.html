@@ -1,0 +1,23 @@
+<!-- searching and showing movie in player -->
+{%extends 'main.html'%} {%block content%} {%include 'navbar.html'%}
+<div style="overflow:auto">
+
+    <!--method for search using title -->
+
+    <center> {% include 'stream/search.html' %}</center>
+    <br>
+    <!-- listing top 10 Series -->
+    <div class="center">
+        <ul id="list1" style="list-style: none;">
+            <h3 style="color: rgb(143, 143, 143);">
+                Top Series (under maintenance)</h3>
+            <!-- <hr  style="width:50%;"> -->
+            {% for movie in movies %}
+
+            <li><img src="{{movie.img}}" alt=""><a href="{% url 'seriesdetails' movie.movieID %}">{{movie}} ({{movie.year}})</a></li>
+            {% endfor %}
+
+        </ul>
+    </div>
+</div>
+{%endblock content%}

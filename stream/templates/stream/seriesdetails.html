@@ -1,0 +1,94 @@
+<!-- page for playing series -->
+{%include 'navbar.html'%}
+<body style="background-color: #1f1e1e">
+    <style>
+        #frame{
+            border-radius: 10px;
+        }
+        #div1{
+            font-size:20px;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            margin: 4px 2px;
+            color: aliceblue;
+        }
+        ul {
+            display: flex;
+            list-style-type: none;
+            width: 85%;
+            flex-wrap: wrap;
+        }
+        li{
+            color: #fff;
+            margin: 10px;
+            padding: 10px;
+            border: 1px solid #fff;
+            text-decoration: none;
+        }
+            .iframe-container {
+            overflow: hidden;
+            /* 16:9 aspect ratio */
+            padding-top: 80.25%;
+            position: relative;
+            }
+
+            .iframe-container iframe {
+            border: 0;
+            height: 100%;
+            left: 0;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            }
+            
+    </style>
+    <div id="div1">
+       <h3> {{movie.title}} {{movie.year}} </h3>
+
+        <!-- a={{movie.genres}} -->
+    </div>
+
+
+<div class="iframe-container ">
+    
+<iframe  src="https://moviehungershaven.xyz/itv/tvs3.php?imdbid=tt{{movie.movieID}}&season=1&episode=1" frameborder="0" allowfullscreen id="frame" ></iframe></div>
+<br>
+{% for episode in episodes.items %}
+<h1>season {{episode.0}} </h1>
+<ul>
+{% for episod in episode.1.items %}
+            <li onclick="changeEpisode('{{movie.movieID}}','{{episode.0}}','{{episod.0}}')">
+                {{episod.0}}
+            </li>
+            {% endfor %}
+        </ul>
+            {% endfor %}
+       
+<!-- <button onclick="myFunction()" id="myBtn">next</button> -->
+<!-- readmore -->
+<!-- <script>
+    function myFunction() {
+        var video=document.getElementById("video")
+      var dots = document.getElementById("dots");
+      var moreText = document.getElementById("more");
+      var btnText = document.getElementById("myBtn");
+    
+      if (dots.style.display === "none") {
+        dots.style.display = "inline";
+        btnText.innerHTML = "Read more"; 
+        moreText.style.display = "none";
+      } else {
+        dots.style.display = "none";
+        btnText.innerHTML = "Read less"; 
+        moreText.style.display = "inline";
+      }
+    }
+    </script> -->
+    <script>
+        function changeEpisode(m,s,e) {
+            var frame=document.getElementById('frame')
+            frame.src="https://moviehungershaven.xyz/itv/tvs3.php?imdbid=tt"+m+"&season="+s+'&episode='+e        
+        }
+    </script>
+   
+</body>
+</html>

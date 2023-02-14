@@ -1,0 +1,182 @@
+<!-- theme page -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Stream</title>
+
+        <style>
+           * {
+  box-sizing: border-box;
+}
+            body,td,th {
+            font-family: Consolas, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", Monaco, "Courier New", monospace;
+            color: rgb(0, 0, 0);background-color: rgb(20, 18, 18);
+            }
+
+            #searchnm{
+    background-color: rgb(232, 238, 253);
+    border-radius: 5px;
+    margin: 4px 2px;
+    padding: 10px 30px;
+    font-size:16px;
+    
+    cursor: pointer;
+    }
+        #searchid{
+        background-color: rgb(232, 238, 253);
+        border-radius: 5px;
+        padding: 10px 30px;
+        font-size:16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        }
+    #searchbtn,#searchnmbtn{
+    background-color: rgb(87, 87, 87);
+    color: rgb(255, 255, 255);
+    border-radius: 5px;
+    padding: 10px 30px;
+    margin: 4px 2px;
+    text-align: center;
+    font-size:16px;
+    
+    cursor: pointer;
+    }
+    #myBtn{
+      background-color: transparent;
+      color: rgb(103, 38, 255);
+      border: none;
+    }
+
+            #list1{
+            padding: 5%;
+            font-size:14px;
+            line-height: 2.9;
+          
+            }
+
+           
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: #da0000;
+  color: white;
+}
+.menu {
+  float: left;
+  width: 20%;
+  text-align: center;
+}
+
+.menu a {
+  background-color: #000000;
+  padding: 8px;
+  margin-top: 7px;
+  display: block;
+  width: 100%;
+  color: rgb(212, 212, 212);
+}
+.center {
+  margin: auto;
+  width: 90%;
+  height: 100%;
+  background-color: #000000;
+  display: block;
+  padding: 0 05px;
+  /* line-height: 2.9; */
+}
+
+.main {
+  float: left;
+  width: 50%;
+  padding: 0 20px;
+  
+}
+
+.right {
+  background-color: #e5e5e5;
+  float: left;
+  width: 20%;
+  padding: 15px;
+  margin-top: 7px;
+  text-align: center;
+}
+.right1 {
+  
+  float: left;
+  height: 100%;
+  padding: 0 20px;
+  margin: auto;
+  background-color: #000000;
+  display: block;
+  line-height: 2.9;
+  width: 50%;
+  /* padding: 15px; */
+  /* margin-top: 7px; */
+  /* text-align: center; */  
+  /* padding: 0 05px; */
+
+}
+
+
+input[type=text] {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('searchicon.png');
+  background-position: 10px 10px; 
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  -webkit-transition: width 0.4s ease-in-out;
+  transition: width 0.4s ease-in-out;
+}
+
+input[type=text]:focus {
+  width: 50%;
+}
+@media only screen and (max-width: 620px) {
+  /* For mobile phones: */
+  .menu, .main, .right {
+    width: 100%;
+  }
+}
+
+    a{
+        color: rgb(237, 255, 237);
+        text-decoration:none;
+    }
+    #more {display: none;}
+        </style>
+        
+</head>
+<body style="font-family:Verdana; color:#aaaaaa;">
+    
+    {%block content%}
+
+    {%endblock content%}
+
+    <!-- <hr>
+    <footer  style="color: black;">footer</footer> -->
+</body>
+</html>

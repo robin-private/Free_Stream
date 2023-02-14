@@ -1,0 +1,13 @@
+<!-- movies searching page -->
+{%extends 'main.html'%}
+
+{%block content%}
+<div>
+<form action="{% url 'search_name' %}" method="POST">{% csrf_token %}
+    <input type="text" id="searchnm" name="name" placeholder="Enter your Search">
+    <button type="submit" id="searchbtn" >Search</button>
+    <br>
+
+</form>
+</div>
+{%endblock content%}

@@ -1,0 +1,66 @@
+<!-- results list of searched movies -->
+
+{%extends 'main.html'%} {%block content%} {%include 'navbar.html'%}
+<div style="overflow:auto">
+
+    <!--method for search using title -->
+
+    <center> {% include 'stream/search.html' %}</center>
+    <br>
+    <!-- listing top 10 movies from imdb-->
+    <div class="center">
+        <ul id="list1" style="list-style: none; ">
+            <h3 style="color: rgb(143, 143, 143); ">Search Results (imdb)</h3>
+            {% for movie in movies %}
+            <li>
+
+                <img src="{{movie.img}}" alt=""> {% if movie.kind == 'movie' %}
+
+                <a href="{% url 'moviedetails' movie.movieID %} ">
+                    {{movie}} ({{movie.year}}, {{movie.kind}}) 
+                </a> {% elif movie.kind == 'tv movie' %}
+                <a href="{% url 'moviedetails' movie.movieID %} ">
+                    {{movie}} ({{movie.year}}, {{movie.kind}}) 
+                </a> {% elif movie.kind == 'tv series' %}
+                <a href="{% url 'seriesdetails' movie.movieID %} ">
+                    {{movie}} ({{movie.year}}, {{movie.kind}}) 
+                </a> {% endif %}
+
+            </li>
+
+            {% endfor %}
+        </ul>
+
+    </div>
+
+    <!-- listing top 10 movies from tmdb-->
+    <!-- <div class="right1 main ">
+    <ul id="list1" style="list-style: none; ">
+        <h3 style="color: rgb(143, 143, 143); ">Search Results (tmdb)</h3>
+        {% for movie in movies %}
+            <li>
+              
+                <img src="{{movie.img}}" alt="">
+                {% if movie.kind == 'movie' %}
+                
+                <a href="{% url 'moviedetails' movie.movieID %} ">
+                    {{movie}} ({{movie.year}}, {{movie.kind}}) 
+                </a>
+                {% elif movie.kind == 'tv movie' %}
+                <a href="{% url 'moviedetails' movie.movieID %} ">
+                    {{movie}} ({{movie.year}}, {{movie.kind}}) 
+                </a>
+                {% elif movie.kind == 'tv series' %}
+                <a href="{% url 'seriesdetails' movie.movieID %} ">
+                    {{movie}} ({{movie.year}}, {{movie.kind}}) 
+                </a>
+                {% endif %}
+           
+                </li>
+            
+        {% endfor %}
+        </ul>
+
+</div> -->
+</div>
+{%endblock content%}
